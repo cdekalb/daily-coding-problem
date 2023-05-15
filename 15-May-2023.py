@@ -19,7 +19,7 @@ def sum_exists(num_list, k):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Find if there exist two elements of num_list that sum to k.')
-    parser.add_argument('-l','--list', nargs='+', type=int, help='<Required> Set flag', required=True)
-    parser.add_argument('-i', '--integer', nargs=1, type=int, help='<Required> Set flag', required=True)
+    parser.add_argument('-l','--list', nargs='+', type=int, help='Space-separated values of list', required=True)
+    parser.add_argument('-i', '--integer', nargs=1, type=int, help='Integer on which to check if a two-element sum exists in the provied list', required=True)
     args = parser.parse_args()
     print(sum_exists(args.list, args.integer[0]))
